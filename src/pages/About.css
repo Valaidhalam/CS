@@ -1,0 +1,140 @@
+/* About.css */
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-image {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.office-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #E2E8F0;
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.mv-card {
+    background-color: var(--secondary);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    border-top: 4px solid var(--primary);
+    transition: transform var(--transition-normal);
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+.mv-icon {
+    margin: 0 auto 1.5rem auto;
+}
+
+.profile-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        grid-template-columns: 350px 1fr;
+    }
+}
+
+.profile-photo-wrapper {
+    height: 350px;
+}
+
+@media (min-width: 768px) {
+    .profile-photo-wrapper {
+        height: 100%;
+    }
+}
+
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #CBD5E0;
+    background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: top center;
+}
+
+.profile-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.profile-role {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-credentials {
+    list-style: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.profile-credentials li {
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
