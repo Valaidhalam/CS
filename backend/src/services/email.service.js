@@ -68,8 +68,29 @@ const sendCareerAdminEmail = async (career) => {
   return transporter.sendMail(mailOptions);
 };
 
+const sendCareerAutoReply = async (career) => {
+  const mailOptions = {
+    from: `"T. Thulasi Raman Associates" <${process.env.SMTP_USER}>`,
+    to: career.email,
+    subject: `Thank you for applying to T. Thulasi Raman Associates`,
+    html: `
+      <h2>Application Received</h2>
+      <p>Dear ${career.name},</p>
+      <p>Thank you for applying for the position of <strong>${career.position || 'General Application'}</strong> at T. Thulasi Raman Associates.</p>
+      <p>We have successfully received your application. Our team will review your credentials and get in touch with you if your profile matches our requirements.</p>
+      <p>Typically, we process applications within 1-2 weeks. If you don't hear from us within this period, please note that we have kept your resume on file for future opportunities.</p>
+      <br>
+      <p>Best regards,</p>
+      <p><strong>T. Thulasi Raman Associates</strong></p>
+      <p>Company Secretary Firm</p>
+    `
+  };
+  return transporter.sendMail(mailOptions);
+};
+
 module.exports = {
   sendEnquiryAdminEmail,
   sendEnquiryAutoReply,
-  sendCareerAdminEmail
+  sendCareerAdminEmail,
+  sendCareerAutoReply
 };

@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Briefcase, GraduationCap } from 'lucide-react';
+import { Users, Briefcase, GraduationCap, Mail, Phone, FileText } from 'lucide-react';
 import './Careers.css';
 
 export default function Careers() {
+    const [formStatus, setFormStatus] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            position: formData.get('position'),
+            resumeLink: formData.get('resumeLink')
+        };
+        try {
+            const response = await fetch('http://localhost:5000/api/careers', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            if (response.ok) {
+                setFormStatus('success');
+                e.target.reset();
+            } else {
+                setFormStatus('error');
+            }
+        } catch (error) {
+            setFormStatus('error');
+        }
+    };
     return (
         <div className="careers-page animate-fade-in">
             <div className="page-header text-center bg-primary text-white section">
@@ -63,10 +91,54 @@ export default function Careers() {
                             </div>
                         </div>
 
-                        <div className="general-application mt-5">
-                            <h3 className="mb-2">Don't see a suitable role?</h3>
-                            <p className="text-muted mb-3">Send us your resume, and we'll reach out when a relevant position opens up.</p>
-                            <Link to="/contact" className="btn btn-outline">Submit Resume</Link>
+                        <div className="application-form mt-5">
+                            <h3 className="mb-3">Submit Your Application</h3>
+                            <p className="text-muted mb-4">Fill out the form below to apply. We'll review your resume and get back to you.</p>
+                            
+                            <form onSubmit={handleSubmit} className="career-form">
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label htmlFor="name">Full Name *</label>
+                                        <input type="text" id="name" name="name" required placeholder="Your full name" />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required placeholder="your@email.com" />
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="form-group">
+                                        <label htmlFor="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required placeholder="+91 90000 00000" />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="position">Position Applied For</label>
+                                        <select id="position" name="position">
+                                            <option value="">Select a position</option>
+                                            <option value="Qualified Company Secretary">Qualified Company Secretary</option>
+                                            <option value="Management Trainee">Management Trainee</option>
+                                            <option value="General Application">General Application</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="resumeLink">Resume Link (Google Drive/LinkedIn) *</label>
+                                    <input type="url" id="resumeLink" name="resumeLink" required placeholder="https://drive.google.com/..." />
+                                    <small className="text-muted">Share your resume via Google Drive, Dropbox, or LinkedIn</small>
+                                </div>
+                                <button type="submit" className="btn btn-primary">Submit Application</button>
+                                
+                                {formStatus === 'success' && (
+                                    <div className="form-success mt-3">
+                                        Thank you! Your application has been submitted successfully. We will contact you soon.
+                                    </div>
+                                )}
+                                {formStatus === 'error' && (
+                                    <div className="form-error mt-3">
+                                        Something went wrong. Please try again or email us directly.
+                                    </div>
+                                )}
+                            </form>
                         </div>
                     </div>
                 </div>

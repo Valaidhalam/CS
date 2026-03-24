@@ -5,11 +5,33 @@ import './Contact.css';
 export default function Contact() {
     const [formStatus, setFormStatus] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Simulate Formspree submission success
-        setFormStatus("success");
-        e.target.reset();
+        const formData = new FormData(e.target);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            service: formData.get('service'),
+            message: formData.get('message')
+        };
+
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                setFormStatus('success');
+                e.target.reset();
+            } else {
+                setFormStatus('error');
+            }
+        } catch (error) {
+            setFormStatus('error');
+        }
     };
 
     return (
@@ -74,6 +96,11 @@ export default function Contact() {
                                 Thank you! Your message has been sent successfully. We will get back to you soon.
                             </div>
                         )}
+                        {formStatus === 'error' && (
+                            <div className="form-error">
+                                Something went wrong. Please try again or email us directly.
+                            </div>
+                        )}
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="name">Full Name *</label>
@@ -93,11 +120,10 @@ export default function Contact() {
                                 <label htmlFor="service">Service of Interest</label>
                                 <select id="service" name="service">
                                     <option value="">Select a service / general enquiry</option>
-                                    <option value="corporate-law">Corporate Law</option>
-                                    <option value="compliance">Compliance & Secretarial</option>
-                                    <option value="taxation">Taxation & GST</option>
-                                    <option value="ip">Intellectual Property</option>
-                                    <option value="careers">Careers / Job Application</option>
+                                    <option value="Corporate Law">Corporate Law</option>
+                                    <option value="Compliance & Secretarial">Compliance & Secretarial</option>
+                                    <option value="Taxation & GST">Taxation & GST</option>
+                                    <option value="Intellectual Property">Intellectual Property</option>
                                 </select>
                             </div>
                             <div className="form-group">
