@@ -37,7 +37,7 @@ export default function Services() {
 
     return (
         <div className="services-page animate-fade-in">
-            <div className="page-header text-center bg-primary text-white section">
+            <div className="page-header text-center bg-primary text-white">
                 <div className="container">
                     <h1 className="page-title">Our Services</h1>
                     <p className="page-subtitle">Comprehensive corporate legal and compliance solutions.</p>

@@ -136,3 +136,16 @@ textarea:focus {
     height: 450px;
     width: 100%;
 }
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+
+    height: 300px;
+    background-color: var(--primary);
+}
+.page-subtitle {
+    margin: 0 auto;
+}

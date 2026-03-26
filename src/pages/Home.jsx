@@ -186,6 +186,40 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            {/* Industries We Serve */}
+<section className="section bg-surface industries-section">
+  <div className="container">
+
+    <div className="section-header text-center">
+      <h2 className="section-title">Industries We Serve</h2>
+      <div className="title-underline mx-auto"></div>
+      <p className="section-desc max-w-700 mx-auto">
+        Supporting businesses across diverse industries with expert legal and compliance services.
+      </p>
+    </div>
+
+    <div className="industries-grid">
+
+      <div className="industry-card">🏥 Healthcare & Pharma</div>
+      <div className="industry-card">🏨 Hospitality & Resorts</div>
+      <div className="industry-card">🌾 Agro & Food Industries</div>
+
+      <div className="industry-card">🏢 Real Estate & Construction</div>
+      <div className="industry-card">⚡ Renewable Energy</div>
+      <div className="industry-card">🏭 Manufacturing Units</div>
+
+      <div className="industry-card">🛍 FMCG & Retail</div>
+      <div className="industry-card">🎓 Education & Institutions</div>
+      <div className="industry-card">💻 IT & Software</div>
+
+      <div className="industry-card">🚚 Logistics & Supply Chain</div>
+      <div className="industry-card">💰 Financial Services</div>
+      <div className="industry-card">🤝 NGOs & CSR</div>
+
+    </div>
+
+  </div>
+</section>
         </div>
     );
 }

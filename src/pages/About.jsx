@@ -5,7 +5,7 @@ import './About.css';
 export default function About() {
     return (
         <div className="about-page animate-fade-in">
-            <div className="page-header text-center bg-primary text-white section">
+            <div className="page-header text-center bg-primary text-white">
                 <div className="container">
                     <h1 className="page-title">About Us</h1>
                     <p className="page-subtitle">Driven by integrity, expertise, and a commitment to excellence.</p>
@@ -53,22 +53,39 @@ export default function About() {
 
             <div className="container section">
                 <div className="profile-section text-center">
-                    <h2 className="section-title">Principal Profile</h2>
+
+                    {/* ❌ removed outside heading */}
+
                     <div className="profile-card mt-4">
                         <div className="profile-photo-wrapper">
                             <div className="profile-placeholder"></div>
                         </div>
+
                         <div className="profile-info text-left">
+
+                            {/* ✅ added inside */}
+                            <p className="profile-title">Principal Profile</p>
+
                             <h3 className="profile-name">CS T. Thulasi Raman</h3>
-                            <p className="profile-role text-accent">Founder &amp; Principal Company Secretary</p>
+
+                            <p className="profile-role text-accent">
+                                Founder &amp; Principal Company Secretary
+                            </p>
+
                             <div className="profile-bio section-desc">
-                                <p>CS T. Thulasi Raman is a Fellow Member of the Institute of Company Secretaries of India (ICSI) with over 15 years of rich experience in Corporate Laws, FEMA, and Securities Laws.</p>
-                                <p className="mt-2">He specializes in corporate restructuring, mergers and amalgamations, and acts as a strategic advisor to boards of various listed and unlisted companies.</p>
+                                <p>
+                                    CS T. Thulasi Raman is a Fellow Member of the Institute of Company Secretaries of India (ICSI) with over 15 years of rich experience in Corporate Laws, FEMA, and Securities Laws.
+                                </p>
+                                <p className="mt-2">
+                                    He specializes in corporate restructuring, mergers and amalgamations, and acts as a strategic advisor to boards of various listed and unlisted companies.
+                                </p>
+
                                 <ul className="profile-credentials mt-3">
                                     <li><strong>Qualifications:</strong> B.Com, FCS, LL.B</li>
                                     <li><strong>Memberships:</strong> Fellow Member, ICSI</li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                 </div>

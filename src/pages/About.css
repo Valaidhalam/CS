@@ -40,10 +40,16 @@
     background-position: center;
 }
 
+/* 🔥 FIX: remove space above mission section */
+.section {
+    padding-top: 1rem;   /* reduced top spacing */
+}
+
 .mission-vision-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -73,6 +79,7 @@
 .profile-card {
     max-width: 900px;
     margin: 0 auto;
+    margin-top: -2rem;
     background-color: var(--secondary);
     border-radius: 8px;
     box-shadow: var(--shadow-md);
@@ -107,7 +114,7 @@
 }
 
 .profile-info {
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,16 +132,35 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .profile-credentials {
     list-style: none;
     border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
+    padding-top: 0.75rem;
 }
 
 .profile-credentials li {
     margin-bottom: 0.5rem;
     color: var(--text-main);
+}
+.profile-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+
+    height: 300px;
+    background-color: var(--primary);
+}
+.page-subtitle {
+    margin: 0 auto;
 }

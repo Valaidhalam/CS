@@ -36,7 +36,7 @@ export default function Contact() {
 
     return (
         <div className="contact-page animate-fade-in">
-            <div className="page-header text-center bg-primary text-white section">
+            <div className="page-header text-center bg-primary text-white">
                 <div className="container">
                     <h1 className="page-title">Contact Us</h1>
                     <p className="page-subtitle">We're here to help you navigate corporate complexities.</p>
@@ -116,16 +116,16 @@ export default function Contact() {
                                     <input type="tel" id="phone" name="phone" placeholder="+91 90000 00000" />
                                 </div>
                             </div>
-                            <div className="form-group">
-                                <label htmlFor="service">Service of Interest</label>
-                                <select id="service" name="service">
-                                    <option value="">Select a service / general enquiry</option>
-                                    <option value="Corporate Law">Corporate Law</option>
-                                    <option value="Compliance & Secretarial">Compliance & Secretarial</option>
-                                    <option value="Taxation & GST">Taxation & GST</option>
-                                    <option value="Intellectual Property">Intellectual Property</option>
-                                </select>
-                            </div>
+                           <div className="form-group">
+    <label htmlFor="service">Service of Interest</label>
+    <select id="service" name="service" required>
+        <option value="" disabled selected>Select the Service</option>
+        <option value="Compliance / Corporate Law / Secretarial">Compliance / Corporate Law / Secretarial</option>
+        <option value="Consulting">Consulting</option>
+        <option value="Taxation & GST">Taxation & GST</option>
+        <option value="Intellectual Property">Intellectual Property</option>
+    </select>
+</div>
                             <div className="form-group">
                                 <label htmlFor="message">Message *</label>
                                 <textarea id="message" name="message" rows="5" required placeholder="How can we assist you?"></textarea>
