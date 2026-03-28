@@ -164,3 +164,216 @@
     font-size: 0.95rem;
     background-color: rgba(0, 0, 0, 0.15);
 }
+.dev-credit {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.dev-credit a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dev-credit a:hover {
+  text-decoration: underline;
+}
+.dev-credit {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.dev-credit a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dev-credit a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+.contact-legal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .contact-legal-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+.contact-legal-grid {
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width: 768px) {
+    .contact-legal-grid {
+        flex-direction: column;
+    }
+}
+/* GRID */
+.contact-legal-grid {
+    display: flex;
+    gap: 30px;
+}
+
+/* REMOVE BIG SPACING */
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-contact li {
+    margin-bottom: 8px;
+}
+
+/* FORCE SINGLE LINE */
+.footer-links a {
+    white-space: nowrap;
+}
+
+/* CLEAN TEXT SIZE */
+.footer-links a,
+.footer-contact span,
+.footer-contact a {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-legal-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* FIX LEGAL ALIGNMENT */
+.contact-legal-grid > div:last-child {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* REMOVE ANY DEFAULT UL INDENT */
+.footer-links {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* ALIGN TEXT PERFECTLY */
+.footer-links li {
+    list-style: none;
+    margin-left: 0;
+}
+
+/* MAKE BOTH COLUMNS SAME WIDTH */
+.contact-legal-grid > div {
+    flex: 1;
+}
+
+/* OPTIONAL: tighten look */
+.contact-legal-grid {
+    align-items: flex-start;
+}
+
+
+
+/* MAKE ALL COLUMNS FIT IN ONE LINE */
+.footer-container {
+    display: flex;
+    flex-wrap: nowrap; /* ❗ important */
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* CONTROL WIDTH */
+.footer-col {
+    flex: 1;
+    min-width: 180px; /* prevent breaking */
+}
+
+/* MAKE CONTACT SAME SIZE */
+.footer-col:last-child {
+    max-width: 260px;
+}
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-wrap: wrap;
+    }
+}
+/* REDUCE COLUMN GAP */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* 🔥 reduce from 40px → 20px */
+}
+
+/* CONTROL WIDTH PROPERLY */
+.footer-container {
+    display: flex;
+    justify-content: flex-start; /* 🔥 important */
+    gap: 40px; /* spacing between columns */
+}
+
+/* LOGO COLUMN (reduce width) */
+.footer-col:first-child {
+    flex: 1.2; /* earlier big → now reduced */
+    max-width: 320px;
+}
+
+/* QUICK LINKS (bring closer) */
+.footer-col:nth-child(2) {
+    flex: 1;
+    margin-left: 0; /* remove any extra push */
+}
+
+/* OTHER COLUMNS */
+.footer-col {
+    flex: 1;
+}
+
+/* CONTROL WIDTH PROPERLY */
+.footer-container {
+    display: flex;
+    justify-content: flex-start; /* 🔥 important */
+    gap: 40px; /* spacing between columns */
+}
+
+/* LOGO COLUMN (reduce width) */
+.footer-col:first-child {
+    flex: 1.2; /* earlier big → now reduced */
+    max-width: 320px;
+}
+
+/* QUICK LINKS (bring closer) */
+.footer-col:nth-child(2) {
+    flex: 1;
+    margin-left: 0; /* remove any extra push */
+}
+
+/* OTHER COLUMNS */
+.footer-col {
+    flex: 1;
+}
+/* MOVE QUICK LINKS TOWARDS PRACTICE AREAS */
+.footer-col:nth-child(2) {
+    margin-left: 40px; /* increase to move right */
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr;
+    gap: 24px; /* 🔥 clean equal spacing */
+}
+.footer-container {
+    gap: 16px;
+}

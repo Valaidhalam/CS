@@ -8,7 +8,10 @@ export default function Footer() {
 
     return (
         <footer className="footer">
+
             <div className="container footer-container">
+
+                {/* Logo */}
                 <div className="footer-col">
                     <Link to="/" className="footer-logo">
                         <Gavel className="footer-icon" size={32} />
@@ -17,16 +20,19 @@ export default function Footer() {
                             <span className="footer-subtitle">Associates</span>
                         </div>
                     </Link>
+
                     <p className="footer-desc">
                         Governance. Compliance. Confidence. Providing premium Company Secretary and Legal Advisory services across India.
                     </p>
+
                     <div className="social-links">
-                        <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                        <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-                        <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
+                        <a href="#"><Linkedin size={20} /></a>
+                        <a href="#"><Facebook size={20} /></a>
+                        <a href="#"><Twitter size={20} /></a>
                     </div>
                 </div>
 
+                {/* Quick Links */}
                 <div className="footer-col">
                     <h4 className="footer-heading">Quick Links</h4>
                     <ul className="footer-links">
@@ -38,6 +44,7 @@ export default function Footer() {
                     </ul>
                 </div>
 
+                {/* Practice Areas */}
                 <div className="footer-col">
                     <h4 className="footer-heading">Practice Areas</h4>
                     <ul className="footer-links">
@@ -48,6 +55,17 @@ export default function Footer() {
                     </ul>
                 </div>
 
+                {/* ✅ Legal (MOVED BEFORE CONTACT) */}
+                <div className="footer-col">
+                    <h4 className="footer-heading">Legal</h4>
+                    <ul className="footer-links">
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookies</a></li>
+                    </ul>
+                </div>
+
+                {/* Contact */}
                 <div className="footer-col">
                     <h4 className="footer-heading">Contact Us</h4>
                     <ul className="footer-contact">
@@ -61,16 +79,35 @@ export default function Footer() {
                         </li>
                         <li>
                             <Mail size={18} className="contact-icon" />
-                            <a href="mailto:contact@tthulasiraman.com">contact@tthulasiraman.com</a>
+                            <a href="mailto:contact@tthulasiraman.com">
+                                contact@tthulasiraman.com
+                            </a>
                         </li>
                     </ul>
                 </div>
+
             </div>
+
+            {/* Bottom */}
             <div className="footer-bottom">
                 <div className="container">
-                    <p>&copy; {currentYear} T. Thulasi Raman Associates. All rights reserved.</p>
+
+                    <p>© {currentYear} T. Thulasi Raman Associates. All rights reserved.</p>
+
+                    <p className="dev-credit">
+                        Developed by{" "}
+                        <a
+                            href="https://www.valaidhalam.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Valaidhalam technologies
+                        </a>
+                    </p>
+
                 </div>
             </div>
+
         </footer>
     );
 }

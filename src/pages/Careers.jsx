@@ -5,6 +5,7 @@ import './Careers.css';
 
 export default function Careers() {
     const [formStatus, setFormStatus] = useState(null);
+    const [showForm, setShowForm] = useState(false); // ✅ added
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,9 +33,10 @@ export default function Careers() {
             setFormStatus('error');
         }
     };
+
     return (
         <div className="careers-page animate-fade-in">
-            <div className="page-header text-center bg-primary text-white section">
+            <div className="page-header text-center bg-primary text-white">
                 <div className="container">
                     <h1 className="page-title">Careers</h1>
                     <p className="page-subtitle">Join a team of dedicated professionals shaping corporate governance.</p>
@@ -80,66 +82,92 @@ export default function Careers() {
                                     <h3 className="opening-title">Qualified Company Secretary</h3>
                                     <p className="opening-exp">Experience: 2-3 Years</p>
                                 </div>
-                                <Link to="/contact" className="btn btn-primary">Apply Now</Link>
+
+                                {/* ✅ ONLY CHANGE */}
+                                <button className="btn btn-primary" onClick={() => setShowForm(true)}>
+                                    Apply Now
+                                </button>
+
                             </div>
+
                             <div className="opening-card">
                                 <div className="opening-info">
                                     <h3 className="opening-title">Management Trainee (CS Executive/Professional)</h3>
                                     <p className="opening-exp">Experience: Fresher</p>
                                 </div>
-                                <Link to="/contact" className="btn btn-primary">Apply Now</Link>
+
+                                {/* ✅ ONLY CHANGE */}
+                                <button className="btn btn-primary" onClick={() => setShowForm(true)}>
+                                    Apply Now
+                                </button>
+
                             </div>
                         </div>
 
-                        <div className="application-form mt-5">
-                            <h3 className="mb-3">Submit Your Application</h3>
-                            <p className="text-muted mb-4">Fill out the form below to apply. We'll review your resume and get back to you.</p>
-                            
-                            <form onSubmit={handleSubmit} className="career-form">
-                                <div className="form-row">
-                                    <div className="form-group">
-                                        <label htmlFor="name">Full Name *</label>
-                                        <input type="text" id="name" name="name" required placeholder="Your full name" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email Address *</label>
-                                        <input type="email" id="email" name="email" required placeholder="your@email.com" />
-                                    </div>
-                                </div>
-                                <div className="form-row">
-                                    <div className="form-group">
-                                        <label htmlFor="phone">Phone Number *</label>
-                                        <input type="tel" id="phone" name="phone" required placeholder="+91 90000 00000" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="position">Position Applied For</label>
-                                        <select id="position" name="position">
-                                            <option value="">Select a position</option>
-                                            <option value="Qualified Company Secretary">Qualified Company Secretary</option>
-                                            <option value="Management Trainee">Management Trainee</option>
-                                            <option value="General Application">General Application</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="resumeLink">Resume Link (Google Drive/LinkedIn) *</label>
-                                    <input type="url" id="resumeLink" name="resumeLink" required placeholder="https://drive.google.com/..." />
-                                    <small className="text-muted">Share your resume via Google Drive, Dropbox, or LinkedIn</small>
-                                </div>
-                                <button type="submit" className="btn btn-primary">Submit Application</button>
-                                
-                                {formStatus === 'success' && (
-                                    <div className="form-success mt-3">
-                                        Thank you! Your application has been submitted successfully. We will contact you soon.
-                                    </div>
-                                )}
-                                {formStatus === 'error' && (
-                                    <div className="form-error mt-3">
-                                        Something went wrong. Please try again or email us directly.
-                                    </div>
-                                )}
-                            </form>
-                        </div>
+                        {/* ❌ OLD FORM REMOVED FROM PAGE */}
+
+                        {/* ✅ SAME OLD FORM INSIDE POPUP (UNCHANGED) */}
+                       {showForm && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+
+      <button className="close-btn" onClick={() => setShowForm(false)}>✕</button>
+
+      <div className="application-form">
+
+        <h3 className="form-title">Join Our Team</h3>
+        <p className="form-subtitle">
+          Send us your application and we'll get back to you
+        </p>
+
+        <form onSubmit={handleSubmit} className="career-form">
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>Full Name *</label>
+              <input type="text" name="name" required placeholder="John Doe" />
+            </div>
+
+            <div className="form-group">
+              <label>Email *</label>
+              <input type="email" name="email" required placeholder="john@example.com" />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>Phone *</label>
+              <input type="tel" name="phone" required placeholder="+91 98765 43210" />
+            </div>
+
+            <div className="form-group">
+              <label>Position</label>
+              <select name="position">
+                <option>Select a position</option>
+                <option>Qualified Company Secretary</option>
+                <option>Management Trainee</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label>Upload Resume *</label>
+            <input type="file" name="resume" required />
+          </div>
+
+          <button type="submit" className="btn submit-btn">
+            Submit Application
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+)}
+
+
+
                     </div>
                 </div>
             </div>

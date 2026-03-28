@@ -146,40 +146,37 @@ export default function Home() {
                     <div className="testimonials-grid">
                         <div className="testimonial-card">
                             <div className="quote-mark">"</div>
-                            <p className="testimonial-text">T. Thulasi Raman Associates has been instrumental in streamlining our corporate compliance. Their proactive approach gives us complete peace of mind.</p>
+                            <p className="testimonial-text">Affordable and efficient ROC filing service. The team is very responsive and keeps track of deadlines. Highly recommended for startups and small businesses.</p>
                             <div className="testimonial-footer">
                                 <div className="stars">
                                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="star-icon" size={14} fill="currentColor" />)}
                                 </div>
                                 <div className="testimonial-author">
-                                    <h4 className="author-name">Ravi Kumar</h4>
-                                    <p className="author-role">Director, TechNova Solutions</p>
+                                    <h4 className="author-name">Arun Praskan Thanigasalam</h4>
                                 </div>
                             </div>
                         </div>
                         <div className="testimonial-card">
                             <div className="quote-mark">"</div>
-                            <p className="testimonial-text">Exceptional service in handling our GST and taxation matters. Highly professional, knowledgeable, and always accessible when needed the most.</p>
+                            <p className="testimonial-text">Mr.Tulasiraman has helped me in the settlement of my IEPF claim which is a long pending issue. His constant support and follow up in this regard is very much appreciable and praiseworthy.</p>
                             <div className="testimonial-footer">
                                 <div className="stars">
                                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="star-icon" size={14} fill="currentColor" />)}
                                 </div>
                                 <div className="testimonial-author">
-                                    <h4 className="author-name">Priya Natarajan</h4>
-                                    <p className="author-role">Founder, GreenRetail</p>
+                                    <h4 className="author-name">Seethalakshmi Vishwanathan</h4>
                                 </div>
                             </div>
                         </div>
                         <div className="testimonial-card">
                             <div className="quote-mark">"</div>
-                            <p className="testimonial-text">From trademark registration to complex corporate structuring, their expertise is unmatched in Salem. A truly premium and reliable firm.</p>
+                            <p className="testimonial-text">On the first day, the first lesson from thulasi raman sir was "padikadhinga, thedunga" These words inspired me. Had a great and knowledgeable experience. Gained knowledge more than my academy portions.</p>
                             <div className="testimonial-footer">
                                 <div className="stars">
                                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="star-icon" size={14} fill="currentColor" />)}
                                 </div>
                                 <div className="testimonial-author">
-                                    <h4 className="author-name">Suresh Menon</h4>
-                                    <p className="author-role">CEO, Menon Builders</p>
+                                    <h4 className="author-name">Shakthi Muthuvalli</h4>
                                 </div>
                             </div>
                         </div>
