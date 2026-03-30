@@ -1,63 +1,115 @@
 .page-header {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 1rem;
     background-color: var(--primary);
+    height: auto;
+    min-height: 200px;
 }
 
 @media (min-width: 768px) {
     .page-header {
         padding: var(--spacing-xxl) 0;
+        min-height: 300px;
     }
 }
 
-.page-header .hero-subtitle {
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+.page-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 0.95rem;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
 }
 
 .services-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xxl);
+    gap: var(--spacing-xl);
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .services-list {
+        gap: var(--spacing-xxl);
+        padding: 0;
+    }
 }
 
 .service-detail-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
 }
 
 @media (min-width: 992px) {
     .service-detail-card {
-        grid-template-columns: 1fr 1fr;
+        flex-direction: row;
+        gap: 3rem;
     }
 
-    .service-detail-card.reverse .service-detail-content {
-        order: 2;
+    .service-detail-card.reverse {
+        flex-direction: row-reverse;
     }
+}
 
-    .service-detail-card.reverse .service-detail-image {
-        order: 1;
-    }
+.service-detail-content {
+    order: 1;
 }
 
 .service-detail-icon {
     color: var(--accent-gold);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.service-features {
-    list-style: none;
-    margin-top: 0.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+.service-detail-icon svg {
+    width: 36px;
+    height: 36px;
 }
 
-@media (min-width: 576px) {
-    .service-features {
-        grid-template-columns: 1fr 1fr;
+@media (min-width: 768px) {
+    .service-detail-icon {
+        margin-bottom: 1.5rem;
+    }
+
+    .service-detail-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-desc {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -67,13 +119,53 @@
     gap: 0.5rem;
     color: var(--text-muted);
     font-weight: 500;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+    .service-features li {
+        font-size: 1rem;
+    }
+}
+
+.service-features {
+    list-style: none;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .service-features {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .service-detail-image {
-    height: 400px;
+    height: 250px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    order: 2;
+}
+
+@media (min-width: 768px) {
+    .service-detail-image {
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .service-detail-image {
+        height: 400px;
+        order: 2;
+    }
+
+    .service-detail-card.reverse .service-detail-image {
+        order: 1;
+    }
 }
 
 .image-placeholder {
@@ -85,16 +177,21 @@
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
 }
-.page-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* vertical center */
-    align-items: center;       /* horizontal center */
-    text-align: center;
-
-    height: 300px;
-    background-color: var(--primary);
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
 }
-.page-subtitle {
-    margin: 0 auto;
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
 }
