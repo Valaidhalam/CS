@@ -14,21 +14,35 @@
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .about-grid {
+        padding: 0;
+    }
 }
 
 @media (min-width: 992px) {
     .about-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
 }
 
 .about-image {
-    height: 400px;
+    height: 250px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 768px) {
+    .about-image {
+        height: 400px;
+    }
 }
 
 .office-placeholder {
@@ -50,17 +64,26 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-bottom: 0.5rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 576px) {
+    .mission-vision-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 768px) {
     .mission-vision-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 0;
     }
 }
 
 .mv-card {
     background-color: var(--secondary);
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 1rem;
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
     text-align: center;
@@ -68,18 +91,30 @@
     transition: transform var(--transition-normal);
 }
 
+@media (min-width: 768px) {
+    .mv-card {
+        padding: 2.5rem 2rem;
+    }
+}
+
 .mv-card:hover {
     transform: translateY(-5px);
 }
 
 .mv-icon {
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 1rem auto;
+}
+
+@media (min-width: 768px) {
+    .mv-icon {
+        margin: 0 auto 1.5rem auto;
+    }
 }
 
 .profile-card {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
-    margin-top: -2rem;
+    margin-top: -1.5rem;
     background-color: var(--secondary);
     border-radius: 8px;
     box-shadow: var(--shadow-md);
@@ -90,12 +125,14 @@
 
 @media (min-width: 768px) {
     .profile-card {
+        max-width: 900px;
+        margin-top: -2rem;
         grid-template-columns: 350px 1fr;
     }
 }
 
 .profile-photo-wrapper {
-    height: 350px;
+    height: 250px;
 }
 
 @media (min-width: 768px) {
@@ -114,25 +151,44 @@
 }
 
 .profile-info {
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+@media (min-width: 768px) {
+    .profile-info {
+        padding: 2rem;
+    }
+}
+
 .profile-name {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--primary);
     line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .profile-name {
+        font-size: 2rem;
+    }
 }
 
 .profile-role {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .profile-role {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .profile-credentials {
@@ -146,20 +202,34 @@
     color: var(--text-main);
 }
 .profile-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
+
+@media (min-width: 768px) {
+    .profile-title {
+        font-size: 1.5rem;
+    }
+}
 .page-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* vertical center */
-    align-items: center;       /* horizontal center */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-
-    height: 300px;
+    height: auto;
+    min-height: 200px;
+    padding: 2rem 1rem;
     background-color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        height: 300px;
+        padding: 0;
+    }
 }
 .page-subtitle {
     margin: 0 auto;

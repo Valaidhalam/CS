@@ -7,7 +7,7 @@ const enquirySchema = new mongoose.Schema({
   service: { 
     type: String, 
     required: true,
-    enum: ['Corporate Law', 'Compliance & Secretarial', 'Taxation & GST', 'Intellectual Property']
+    enum: ['Compliance / Corporate Law / Secretarial', 'Consulting', 'Taxation & GST', 'Intellectual Property']
   },
   message: { type: String, required: true },
   status: { type: String, enum: ['new', 'read', 'replied'], default: 'new' }

@@ -1,10 +1,17 @@
 .max-w-700 {
-    max-width: 800px;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .max-w-700 {
+        max-width: 800px;
+    }
 }
 
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem;
 }
 
 .mt-5 {
@@ -22,21 +29,36 @@
 .culture-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 576px) {
+    .culture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 768px) {
     .culture-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 0;
     }
 }
 
 .culture-card {
-    padding: 2rem;
+    padding: 1.5rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     text-align: center;
     transition: all var(--transition-normal);
+}
+
+@media (min-width: 768px) {
+    .culture-card {
+        padding: 2rem;
+    }
 }
 
 .culture-card:hover {
@@ -49,8 +71,15 @@
 }
 
 .culture-title {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .culture-title {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
 }
 
 .culture-desc {
@@ -58,18 +87,26 @@
 }
 
 .openings-list {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .openings-list {
+        max-width: 800px;
+        padding: 0;
+    }
 }
 
 .opening-card {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem 2rem;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
     background-color: var(--secondary);
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
@@ -82,18 +119,32 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 1.5rem;
     }
 }
 
 .opening-title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--primary);
     margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .opening-title {
+        font-size: 1.25rem;
+    }
 }
 
 .opening-exp {
     color: var(--text-muted);
     font-size: 0.95rem;
+}
+
+.opening-card .btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    white-space: nowrap;
 }
 
 .general-application {
@@ -108,10 +159,16 @@
 .career-form {
     max-width: 600px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: var(--secondary);
     border-radius: 8px;
     box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 576px) {
+    .career-form {
+        padding: 2rem;
+    }
 }
 
 .form-row {
@@ -136,6 +193,13 @@
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+    .career-form label {
+        font-size: 1rem;
+    }
 }
 
 .career-form input,
@@ -144,9 +208,17 @@
     padding: 0.75rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: white;
     transition: border-color var(--transition-normal);
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+    .career-form input,
+    .career-form select {
+        font-size: 1rem;
+    }
 }
 
 .career-form input:focus,
@@ -174,6 +246,7 @@
     color: #155724;
     border-radius: 6px;
     border: 1px solid #c3e6cb;
+    margin-bottom: 1rem;
 }
 
 .form-error {
@@ -182,157 +255,124 @@
     color: #721c24;
     border-radius: 6px;
     border: 1px solid #f5c6cb;
+    margin-bottom: 1rem;
 }
 
-/* ✅ FIX: remove unwanted gap between sections */
+/* Section Fix */
 .bg-alt.section {
     padding-top: 1rem;
     margin-top: -2rem;
 }
-.about-grid {
-    margin-bottom: 5rem;  /* 👈 adds space below Our Story */
-}
+
 .section-title {
-    margin-bottom: 1rem;  /* 👈 adds gap below "Our Story" */
+    margin-bottom: 1rem;
 }
+
+/* =====================
+   MODAL STYLES (FIXED FOR MOBILE)
+   ===================== */
+
+/* The dark backdrop — fixed to viewport */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99999;
+    box-sizing: border-box;
 }
 
+/* The white modal box */
 .modal-content {
     background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 400px;
-}
-
-.close-btn {
-    float: right;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 500px;
-}
-
-.close-btn {
-    float: right;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-.modal-content {
-    background: white;
-    padding: 2.5rem 3rem;   /* 👈 more inner space */
-    border-radius: 12px;    /* 👈 smoother corners */
-    width: 700px;           /* 👈 wider */
-    max-width: 90%;
-    max-height: 90vh;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 85vh;
     overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
 }
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.6);
+
+@media (min-width: 576px) {
+    .modal-content {
+        padding: 30px 35px;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: #f1f1f1;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    width: 28px;
+    height: 28px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 9999;   /* ✅ important fix */
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    z-index: 10;
 }
+
+.close-btn:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+/* Page Header */
 .page-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* vertical center */
-    align-items: center;       /* horizontal center */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-
-    height: 300px;
+    height: auto;
+    min-height: 200px;
+    padding: 2rem 1rem;
     background-color: var(--primary);
 }
+
+@media (min-width: 768px) {
+    .page-header {
+        height: 300px;
+        padding: 0;
+    }
+}
+
 .page-subtitle {
     margin: 0 auto;
 }
-/* ===== FORM ONLY FIX (NO UI CHANGE) ===== */
 
-/* Reduce form box padding */
-.career-form {
-    padding: 1.2rem !important;   /* 👈 reduced from 2rem */
+/* Application Form in Modal */
+.application-form {
+    margin-top: 1rem;
 }
 
-/* Reduce gap between rows */
-.form-row {
-    gap: 0.8rem !important;
-    margin-bottom: 0.8rem !important;
-}
-
-/* Reduce label spacing */
-.career-form label {
-    margin-bottom: 0.3rem !important;
-    font-size: 0.9rem;
-}
-
-/* Reduce input size */
-.career-form input,
-.career-form select {
-    padding: 0.6rem !important;
-    font-size: 0.9rem;
-}
-
-/* Reduce small text gap */
-.career-form small {
-    margin-top: 0.2rem !important;
-}
-
-/* Reduce button spacing */
-.career-form .btn {
-    margin-top: 0.5rem !important;
-    padding: 0.7rem !important;
-}
-/* ===== MODERN FORM UI ===== */
-
-.modal-content {
-    width: 520px;
-    max-width: 95%;
-    padding: 2rem;
-    border-radius: 14px;
-    background: #ffffff;
-    position: relative;
-}
-
-/* Heading */
 .form-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+@media (min-width: 576px) {
+    .form-title {
+        font-size: 1.6rem;
+    }
 }
 
 .form-subtitle {
@@ -341,9 +381,15 @@
     margin-bottom: 1.5rem;
 }
 
-/* Inputs */
-.career-form input,
-.career-form select {
+.modal-content .career-form {
+    padding: 0;
+    margin-top: 1rem;
+    box-shadow: none;
+    background: transparent;
+}
+
+.modal-content .career-form input,
+.modal-content .career-form select {
     width: 100%;
     padding: 0.85rem;
     border-radius: 10px;
@@ -351,47 +397,36 @@
     background: #f9fafb;
     font-size: 0.95rem;
     transition: all 0.25s ease;
+    box-sizing: border-box;
 }
 
-.career-form input:focus,
-.career-form select:focus {
+.modal-content .career-form input:focus,
+.modal-content .career-form select:focus {
     background: #ffffff;
     border-color: #2563eb;
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
-/* Labels */
-.career-form label {
+.modal-content .career-form label {
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 4px;
 }
 
-/* Button */
 .submit-btn {
     width: 100%;
     padding: 0.9rem;
     border-radius: 10px;
     font-weight: 600;
-    background: linear-gradient(135deg, #0b1f3a, #0a1930); /* dark navy */
+    background: linear-gradient(135deg, #0b1f3a, #0a1930);
     border: none;
     color: white;
     margin-top: 10px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .submit-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 8px 20px rgba(10, 25, 48, 0.4);
-}
-
-/* Close */
-.close-btn {
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    font-size: 20px;
-    border: none;
-    background: none;
-    cursor: pointer;
 }

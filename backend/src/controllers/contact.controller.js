@@ -6,7 +6,7 @@ const contactSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().email().required(),
   phone: Joi.string().pattern(/^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]{9}$/).required(),
-  service: Joi.string().valid('Corporate Law', 'Compliance & Secretarial', 'Taxation & GST', 'Intellectual Property').required(),
+  service: Joi.string().valid('Compliance / Corporate Law / Secretarial', 'Consulting', 'Taxation & GST', 'Intellectual Property').required(),
   message: Joi.string().required()
 });
 
