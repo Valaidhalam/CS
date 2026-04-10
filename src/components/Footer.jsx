@@ -44,14 +44,17 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                {/* Practice Areas */}
+                {/* Our Services */}
                 <div className="footer-col">
-                    <h4 className="footer-heading">Practice Areas</h4>
+                    <h4 className="footer-heading">Our Services</h4>
                     <ul className="footer-links">
-                        <li><Link to="/services#corporate-law">Corporate Law</Link></li>
-                        <li><Link to="/services#compliance">Compliance & Secretarial</Link></li>
-                        <li><Link to="/services#taxation">Taxation & GST</Link></li>
-                        <li><Link to="/services#ip">Intellectual Property</Link></li>
+                        <li><Link to="/services#corporate-secretarial">Corporate & Secretarial</Link></li>
+                        <li><Link to="/services#governance-compliance">Governance & Compliance</Link></li>
+                        <li><Link to="/services#registrations-licenses">Registrations & Licenses</Link></li>
+                        <li><Link to="/services#legal-advisory">Legal & Advisory</Link></li>
+                        <li><Link to="/services#startup-advisory">Startup Advisory</Link></li>
+                        <li><Link to="/services#audit-services">Audit Services</Link></li>
+                        <li><Link to="/services#ipr">Intellectual Property</Link></li>
                     </ul>
                 </div>
 
