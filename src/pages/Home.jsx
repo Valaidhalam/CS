@@ -1,9 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, FileText, Calculator, Lightbulb, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Briefcase, FileText, Calculator, Lightbulb, CheckCircle, Star, ArrowRight, Shield, Award, Scale, ClipboardCheck, Search } from 'lucide-react';
 import './Home.css';
 
 export default function Home() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [itemsPerView, setItemsPerView] = useState(3);
+
+    const homeServices = [
+        { id: "corporate", icon: <Briefcase size={32} />, title: "Corporate & Secretarial", description: "Comprehensive corporate and secretarial solutions for your business ensuring full regulatory compliance.", link: "/services#corporate-secretarial" },
+        { id: "governance", icon: <Shield size={32} />, title: "Corporate Governance", description: "Expert guidance on governance practices across multiple statutory frameworks. We build transparent systems.", link: "/services#governance-compliance" },
+        { id: "registrations", icon: <Award size={32} />, title: "Registrations & Licenses", description: "End-to-end assistance for obtaining critical registrations and licenses. We streamline the approval process.", link: "/services#registrations-licenses" },
+        { id: "legal", icon: <Scale size={32} />, title: "Legal & Advisory", description: "Professional legal consultation designed to protect your core business interests with proactive solutions.", link: "/services#legal-advisory" },
+        { id: "startup", icon: <Lightbulb size={32} />, title: "Startup Advisory", description: "Complete support for startups tracking from formation to scaled operations. Establishing strong basics.", link: "/services#startup-advisory" },
+        { id: "audit", icon: <ClipboardCheck size={32} />, title: "Audit Services", description: "Independent audit and certification services developed to ensure uncompromising financial transparency.", link: "/services#audit-services" },
+        { id: "ipr", icon: <Search size={32} />, title: "Intellectual Property", description: "Strategic protection and dedicated registration of your critical intellectual property assets.", link: "/services#ipr" }
+    ];
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 576) setItemsPerView(1);
+            else if (window.innerWidth < 992) setItemsPerView(2);
+            else setItemsPerView(3);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const maxSlide = Math.max(0, homeServices.length - itemsPerView);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
+        }, 3500);
+        return () => clearInterval(timer);
+    }, [maxSlide]);
+
     return (
         <div className="home-page animate-fade-in">
             {/* Hero Section */}
@@ -66,30 +99,28 @@ export default function Home() {
                         <p className="section-desc max-w-700 mx-auto">Specialized legal and compliance solutions tailored to your business needs, delivered with uncompromising quality.</p>
                     </div>
 
-                    <div className="services-grid">
-                        <div className="service-card animate-delay-1">
-                            <div className="service-icon-wrapper"><Briefcase size={32} /></div>
-                            <h3 className="service-title">Corporate Law</h3>
-                            <p className="service-desc">Expert advisory on corporate restructuring, M&amp;A, and complex corporate legal frameworks.</p>
-                            <Link to="/services#corporate-law" className="service-link">Read More <ArrowRight size={16} /></Link>
+                    <div className="home-carousel-container">
+                        <div className="home-carousel-track" style={{ transform: `translateX(-${currentSlide * (100 / itemsPerView)}%)` }}>
+                            {homeServices.map((svc) => (
+                                <div className="home-carousel-slide" key={svc.id}>
+                                    <div className="service-card" style={{ height: '100%' }}>
+                                        <div className="service-icon-wrapper">{svc.icon}</div>
+                                        <h3 className="service-title">{svc.title}</h3>
+                                        <p className="service-desc">{svc.description}</p>
+                                        <Link to={svc.link} className="service-link" style={{ marginTop: 'auto' }}>Read More <ArrowRight size={16} /></Link>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className="service-card animate-delay-2">
-                            <div className="service-icon-wrapper"><FileText size={32} /></div>
-                            <h3 className="service-title">Compliance</h3>
-                            <p className="service-desc">End-to-end secretarial audits, board processes, and regulatory filings to ensure total compliance.</p>
-                            <Link to="/services#compliance" className="service-link">Read More <ArrowRight size={16} /></Link>
-                        </div>
-                        <div className="service-card animate-delay-3">
-                            <div className="service-icon-wrapper"><Calculator size={32} /></div>
-                            <h3 className="service-title">Taxation &amp; GST</h3>
-                            <p className="service-desc">Strategic tax planning, GST registration, returns filing, and authoritative representation.</p>
-                            <Link to="/services#taxation" className="service-link">Read More <ArrowRight size={16} /></Link>
-                        </div>
-                        <div className="service-card animate-delay-1">
-                            <div className="service-icon-wrapper"><Lightbulb size={32} /></div>
-                            <h3 className="service-title">Intellectual Property</h3>
-                            <p className="service-desc">Fierce protection of your brand assets through trademark, patent, and copyright registrations.</p>
-                            <Link to="/services#ip" className="service-link">Read More <ArrowRight size={16} /></Link>
+                        <div className="carousel-dots">
+                            {Array.from({ length: maxSlide + 1 }).map((_, idx) => (
+                                <button
+                                    key={idx}
+                                    className={`carousel-dot ${currentSlide === idx ? 'active' : ''}`}
+                                    onClick={() => setCurrentSlide(idx)}
+                                    aria-label={`Go to slide ${idx + 1}`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
