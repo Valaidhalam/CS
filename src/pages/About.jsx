@@ -35,12 +35,12 @@ export default function About() {
                         <div className="mv-card">
                             <Target size={40} className="mv-icon text-primary" />
                             <h3 className="service-title">Our Mission</h3>
-                            <p className="service-desc">To deliver uncompromising quality in corporate legal and compliance services, enabling businesses to operate with absolute confidence and legal certainty.</p>
+                            <p className="service-desc">Clear advice. Strong compliance. Real results.</p>
                         </div>
                         <div className="mv-card">
                             <Eye size={40} className="mv-icon text-primary" />
                             <h3 className="service-title">Our Vision</h3>
-                            <p className="service-desc">To be the most trusted and sought-after Company Secretary firm in India, known for our innovative solutions, ethical practices, and client-centric approach.</p>
+                            <p className="service-desc">To lead businesses beyond compliance into confident growth .</p>
                         </div>
                         <div className="mv-card">
                             <Award size={40} className="mv-icon text-primary" />
@@ -64,13 +64,9 @@ export default function About() {
                         <div className="profile-info text-left">
 
                             {/* ✅ added inside */}
-                            <p className="profile-title">Principal Profile</p>
+                            <p className="profile-title">Founder Profile</p>
 
-                            <h3 className="profile-name">CS T. Thulasi Raman</h3>
-
-                            <p className="profile-role text-accent">
-                                Founder &amp; Principal Company Secretary
-                            </p>
+                            <h3 className="profile-name">CS T. Thulasi Raman,B.com,B.GL.,FCS</h3>
 
                             <div className="profile-bio section-desc">
                                 <p>
@@ -81,8 +77,11 @@ export default function About() {
                                 </p>
 
                                 <ul className="profile-credentials mt-3">
-                                    <li><strong>Qualifications:</strong> B.Com, FCS, LL.B</li>
-                                    <li><strong>Memberships:</strong> Fellow Member, ICSI</li>
+                                    <li><strong>Registered Trademark Agent</strong></li>
+                                    <li><strong>Certified Independent Director</strong></li>
+                                       <li><strong>10+ Years of Practice as Company Secretary.</strong></li>
+                                    <li><strong>Chairman ICSI - Salem Chapter, 2023</strong> </li>
+                                    <li><strong>Secretary ICSI - Salem Chapter, 2018</strong></li>
                                 </ul>
                             </div>
 

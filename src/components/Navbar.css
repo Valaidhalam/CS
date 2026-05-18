@@ -39,6 +39,11 @@
     opacity: 1;
 }
 
+.logo-icon {
+    width: 40px;
+    height: auto;
+}
+
 .logo-text {
     display: flex;
     flex-direction: column;

@@ -56,7 +56,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4>Office Address</h4>
-                                    <p>123 Legal Avenue, Fairlands<br />Salem, Tamil Nadu, India - 636001</p>
+                                    <p>RMR Fairlands Tower, 4th Floor, Door No. 10, Park Street, Fairlands<br />Salem, Tamil Nadu, India - 636001</p>
                                 </div>
                             </li>
                             <li>
@@ -65,7 +65,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4>Phone</h4>
-                                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                                    <p><a href="tel:+917339688388">+91 7339688388</a></p>
                                 </div>
                             </li>
                             <li>
@@ -74,7 +74,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p><a href="mailto:contact@tthulasiraman.com">contact@tthulasiraman.com</a></p>
+                                    <p><a href="mailto:csthulasiraman@gmail.com">csthulasiraman@gmail.com</a></p>
                                 </div>
                             </li>
                             <li>
@@ -83,7 +83,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4>Working Hours</h4>
-                                    <p>Mon - Sat: 9:30 AM - 6:30 PM<br />Sunday: Closed</p>
+                                    <p>Mon - Friday: 9:30 AM - 6:30 PM<br />Saturday & Sunday: Closed</p>
                                 </div>
                             </li>
                         </ul>

@@ -16,16 +16,16 @@ export default function Services() {
             id: "corporate-secretarial",
             icon: <Briefcase size={48} />,
             title: "Corporate & Secretarial Services",
-            description: "Comprehensive corporate and secretarial solutions for businesses of all sizes. We ensure your company maintains full regulatory compliance while focusing on growth.",
-            features: ["Company, LLP & Entity Incorporation", "Secretarial Compliance & ROC Filings", "Drafting of Resolutions, Minutes & Agreements", "Maintenance of Statutory Registers"],
+            description: "Comprehensive corporate and secretarial solutions for businesses of all sizes.We help companies maintain strong regulatory compliance and governance standards while enabling management to focus on growth and strategic operations.",
+            features: ["Company, LLP & Partnership – Incorporation & Formation", "Secretarial Compliance & ROC Filings", "Drafting of Resolutions, Minutes & Agreements", "Maintenance of Statutory Registers and Records","Digital Signature Certificates"],
             image: corporateImg
         },
         {
             id: "governance-compliance",
             icon: <Shield size={48} />,
             title: "Corporate Governance & Regulatory Compliance",
-            description: "Expert guidance on corporate governance practices and regulatory compliance across multiple statutory frameworks. We help build transparent, accountable systems.",
-            features: ["Corporate Governance Advisory", "RBI & NBFC Compliances", "IEPF Related Services","Secretarial Audit & Compliance Certification"],
+            description: "Practical Guidance on corporate governance practices and regulatory compliance across multiple statutory frameworks. We assist businesses in building transparent, accountable, and legally compliant systems.",
+            features: ["Corporate Governance Advisory", "RBI & NBFC Compliances", "IEPF Related Services", "FEMA Compliance Support","Secretarial Audit & Compliance Certification","Compliance Management & Regulatory Reporting"],
             image: governanceImg
         },
         {
@@ -33,7 +33,7 @@ export default function Services() {
             icon: <Award size={48} />,
             title: "Registrations & Licenses",
             description: "End-to-end assistance for obtaining various registrations and licenses required for business operations. We streamline the approval process to ensure rapid compliance.",
-            features: ["NBFC Registration", "FSSAI Registration", "Factory License", "ISO Certification", "DGFT Registration", "GST Registration"],
+            features: ["NBFC Registration", "FSSAI Registration", "Factory License", "ISO Certification", "DGFT Registration", "GST Registration","MSME Registration","Shops & Establishment Registration","Import Export Code"],
             image: registrationsImg
         },
         {
@@ -49,7 +49,7 @@ export default function Services() {
             icon: <Lightbulb size={48} />,
             title: "Startup & Business Advisory",
             description: "Complete support for startups and emerging businesses, tracking from initial formation to scaled operations. We establish strong foundations for sustainable growth.",
-            features: ["Startup Structuring & Advisory", "End-to-End Compliance Support", "Business Setup Assistance"],
+            features: ["Startup Structuring & Advisory", "End-to-End Compliance Support", "Business Setup Assistance", "Investor & Funding Support","Regulatory Advisory for Startups","Business Expansion Assistance"],
             image: startupImg
         },
         {
@@ -57,7 +57,7 @@ export default function Services() {
             icon: <ClipboardCheck size={48} />,
             title: "Audit Services",
             description: "Independent audit, internal review, and certification services developed to ensure uncompromising financial transparency, accuracy, and overall stakeholder confidence.",
-            features: ["Internal Audit", "Certification Services", "Valuation Services"],
+            features: ["Internal Audit", "Certification Services", "Valuation Services","Compliance Audit"],
             image: auditImg
         },
         {
@@ -65,7 +65,7 @@ export default function Services() {
             icon: <Search size={48} />,
             title: "Intellectual Property Rights (IPR)",
             description: "Strategic protection and dedicated registration of your critical intellectual property assets. We safeguard your brand identity, trademarks, and creative innovations.",
-            features: ["Trademark Registration", "Copyright & IPR Advisory", "Protection & Enforcement Support"],
+            features: ["Trademark Registration", "Copyright & IPR Advisory", "Protection & Enforcement Support","Brand Protection Advisory"],
             image: iprImg
         }
     ];

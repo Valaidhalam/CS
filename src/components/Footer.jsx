@@ -74,16 +74,16 @@ export default function Footer() {
                     <ul className="footer-contact">
                         <li>
                             <MapPin size={18} className="contact-icon" />
-                            <span>123 Legal Avenue, Salem, Tamil Nadu, India - 636001</span>
+                            <span>RMR Fairlands Tower, 4th Floor, Door No. 10, Park Street, Fairlands, Salem – 636016.</span>
                         </li>
                         <li>
                             <Phone size={18} className="contact-icon" />
-                            <a href="tel:+919876543210">+91 98765 43210</a>
+                            <a href="tel:+917339688388">+91 7339688388</a>
                         </li>
                         <li>
                             <Mail size={18} className="contact-icon" />
-                            <a href="mailto:contact@tthulasiraman.com">
-                                contact@tthulasiraman.com
+                            <a href="mailto:csthulasiraman@gmail.com">
+                                csthulasiraman@gmail.com
                             </a>
                         </li>
                     </ul>

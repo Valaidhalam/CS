@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Gavel } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
+import cslogoImg from '../assets/services/cslogo-removebg-preview.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
-          <Gavel className="logo-icon" size={28} />
+          <img src={cslogoImg} alt="Logo" className="logo-icon" />
           <div className="logo-text">
             <span className="logo-title">T. Thulasi Raman</span>
             <span className="logo-subtitle">Associates</span>

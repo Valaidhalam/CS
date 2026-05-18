@@ -63,7 +63,7 @@ export default function Home() {
                         <h2 className="section-title">Established Excellence in <br />Corporate Governance</h2>
                         <div className="title-underline"></div>
                         <p className="section-desc">
-                            T. Thulasi Raman Associates is a premier practicing Company Secretary firm dedicated to providing comprehensive corporate legal, compliance, and secretarial services. We partner with businesses—from startups to established enterprises—to navigate complex regulatory landscapes with confidence.
+                            Thulasi Raman & Associates , practicing Company Secretaries  dedicated to providing comprehensive corporate legal, compliance, and secretarial services. We partner with businesses—from startups, MSMEs to established enterprises—to navigate complex regulatory landscapes with confidence.
                         </p>
                         <Link to="/about" className="link-arrow mt-4">
                             Learn About Our Firm <ArrowRight size={18} />
@@ -82,10 +82,6 @@ export default function Home() {
                             <h3 className="stat-number">100%</h3>
                             <p className="stat-label">Compliance Focus</p>
                         </div>
-                        <div className="stat-card">
-                            <h3 className="stat-number">24/7</h3>
-                            <p className="stat-label">Client Support</p>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -96,7 +92,7 @@ export default function Home() {
                     <div className="section-header text-center">
                         <h2 className="section-title">Our Expertise</h2>
                         <div className="title-underline mx-auto"></div>
-                        <p className="section-desc max-w-700 mx-auto">Specialized legal and compliance solutions tailored to your business needs, delivered with uncompromising quality.</p>
+                        <p className="section-desc max-w-700 mx-auto">Strategic legal and compliance solutions crafted for your business and delivered to the highest standards.</p>
                     </div>
 
                     <div className="home-carousel-container">
