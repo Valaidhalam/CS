@@ -1,7 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Briefcase, FileText, Calculator, Lightbulb, ArrowRight, Shield, Award, Scale, Users, ClipboardCheck, Search, Building2, FileCheck, Stamp, Mic, Scale3d, TrendingUp, BadgeCheck } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+import {
+    Briefcase,
+    Lightbulb,
+    ArrowRight,
+    Shield,
+    Award,
+    Scale,
+    ClipboardCheck,
+    Search
+} from 'lucide-react';
+
 import './Services.css';
+
 import corporateImg from '../assets/services/corporate.png';
 import governanceImg from '../assets/services/compliance.png';
 import registrationsImg from '../assets/services/registrations2.png';
@@ -11,98 +23,271 @@ import auditImg from '../assets/services/audit.png';
 import iprImg from '../assets/services/ipr2.png';
 
 export default function Services() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+
+        if (location.hash) {
+
+            const element = document.getElementById(
+                location.hash.replace('#', '')
+            );
+
+            if (element) {
+
+                setTimeout(() => {
+
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                }, 100);
+
+            }
+
+        }
+
+    }, [location]);
+
     const services = [
+
         {
             id: "corporate-secretarial",
             icon: <Briefcase size={48} />,
             title: "Corporate & Secretarial Services",
-            description: "Comprehensive corporate and secretarial solutions for businesses of all sizes.We help companies maintain strong regulatory compliance and governance standards while enabling management to focus on growth and strategic operations.",
-            features: ["Company, LLP & Partnership – Incorporation & Formation", "Secretarial Compliance & ROC Filings", "Drafting of Resolutions, Minutes & Agreements", "Maintenance of Statutory Registers and Records","Digital Signature Certificates"],
+
+            description:
+                "Comprehensive corporate and secretarial solutions for businesses of all sizes.We help companies maintain strong regulatory compliance and governance standards while enabling management to focus on growth and strategic operations.",
+
+            features: [
+                "Digital Signature Certificates",
+                "Secretarial Compliance & ROC Filings",
+                "Drafting of Resolutions, Minutes & Agreements",
+                "Maintenance of Statutory Registers and Records",
+                "Company, LLP & Partnership – Incorporation & Formation",
+            ],
+
             image: corporateImg
         },
+
         {
             id: "governance-compliance",
             icon: <Shield size={48} />,
             title: "Corporate Governance & Regulatory Compliance",
-            description: "Practical Guidance on corporate governance practices and regulatory compliance across multiple statutory frameworks. We assist businesses in building transparent, accountable, and legally compliant systems.",
-            features: ["Corporate Governance Advisory", "RBI & NBFC Compliances", "IEPF Related Services", "FEMA Compliance Support","Secretarial Audit & Compliance Certification","Compliance Management & Regulatory Reporting"],
+
+            description:
+                "Practical Guidance on corporate governance practices and regulatory compliance across multiple statutory frameworks. We assist businesses in building transparent, accountable, and legally compliant systems.",
+
+            features: [
+                "Corporate Governance Advisory",
+                "RBI & NBFC Compliances",
+                "IEPF Related Services",
+                "FEMA Compliance Support",
+                "Secretarial Audit & Compliance Certification",
+                "Compliance Management & Regulatory Reporting"
+            ],
+
             image: governanceImg
         },
+
         {
             id: "registrations-licenses",
             icon: <Award size={48} />,
             title: "Registrations & Licenses",
-            description: "End-to-end assistance for obtaining various registrations and licenses required for business operations. We streamline the approval process to ensure rapid compliance.",
-            features: ["NBFC Registration", "FSSAI Registration", "Factory License", "ISO Certification", "DGFT Registration", "GST Registration","MSME Registration","Shops & Establishment Registration","Import Export Code"],
+
+            description:
+                "End-to-end assistance for obtaining various registrations and licenses required for business operations. We streamline the approval process to ensure rapid compliance.",
+
+            features: [
+                "NBFC Registration",
+                "FSSAI Registration",
+                "Factory License",
+                "ISO Certification",
+                "DGFT Registration",
+                "GST Registration",
+                "MSME Registration",
+                "Shops & Establishment Registration",
+                "Import Export Code"
+            ],
+
             image: registrationsImg
         },
+
         {
             id: "legal-advisory",
             icon: <Scale size={48} />,
             title: "Legal & Advisory",
-            description: "Professional legal consultation and drafting services designed to protect your core business interests. Get proactive legal strategies and robust contract vetting.",
-            features: ["Legal Consultation", "Drafting & Vetting of Agreements", "Due Diligence (Secretarial & Legal)", "Arbitration & Mediation Services"],
+
+            description:
+                "Professional legal consultation and drafting services designed to protect your core business interests. Get proactive legal strategies and robust contract vetting.",
+
+            features: [
+                "Legal Consultation",
+                "Drafting & Vetting of Agreements",
+                "Due Diligence (Secretarial & Legal)",
+                "Arbitration & Mediation Services"
+            ],
+
             image: legalImg
         },
+
         {
             id: "startup-advisory",
             icon: <Lightbulb size={48} />,
             title: "Startup & Business Advisory",
-            description: "Complete support for startups and emerging businesses, tracking from initial formation to scaled operations. We establish strong foundations for sustainable growth.",
-            features: ["Startup Structuring & Advisory", "End-to-End Compliance Support", "Business Setup Assistance", "Investor & Funding Support","Regulatory Advisory for Startups","Business Expansion Assistance"],
+
+            description:
+                "Complete support for startups and emerging businesses, tracking from initial formation to scaled operations. We establish strong foundations for sustainable growth.",
+
+            features: [
+                "Startup Structuring & Advisory",
+                "End-to-End Compliance Support",
+                "Business Setup Assistance",
+                "Investor & Funding Support",
+                "Regulatory Advisory for Startups",
+                "Business Expansion Assistance"
+            ],
+
             image: startupImg
         },
+
         {
             id: "audit-services",
             icon: <ClipboardCheck size={48} />,
             title: "Audit Services",
-            description: "Independent audit, internal review, and certification services developed to ensure uncompromising financial transparency, accuracy, and overall stakeholder confidence.",
-            features: ["Internal Audit", "Certification Services", "Valuation Services","Compliance Audit"],
+
+            description:
+                "Independent audit, internal review, and certification services developed to ensure uncompromising financial transparency, accuracy, and overall stakeholder confidence.",
+
+            features: [
+                "Internal Audit",
+                "Certification Services",
+                "Valuation Services",
+                "Compliance Audit"
+            ],
+
             image: auditImg
         },
+
         {
             id: "ipr",
             icon: <Search size={48} />,
             title: "Intellectual Property Rights (IPR)",
-            description: "Strategic protection and dedicated registration of your critical intellectual property assets. We safeguard your brand identity, trademarks, and creative innovations.",
-            features: ["Trademark Registration", "Copyright & IPR Advisory", "Protection & Enforcement Support","Brand Protection Advisory"],
+
+            description:
+                "Strategic protection and dedicated registration of your critical intellectual property assets. We safeguard your brand identity, trademarks, and creative innovations.",
+
+            features: [
+                "Trademark Registration",
+                "Copyright & IPR Advisory",
+                "Protection & Enforcement Support",
+                "Brand Protection Advisory"
+            ],
+
             image: iprImg
         }
+
     ];
 
     return (
+
         <div className="services-page animate-fade-in">
+
             <div className="page-header text-center bg-primary text-white">
+
                 <div className="container">
-                    <h1 className="page-title">Our Services</h1>
-                    <p className="page-subtitle">Comprehensive corporate legal and compliance solutions.</p>
+
+                    <h1 className="page-title">
+                        Our Services
+                    </h1>
+
+                    <p className="page-subtitle">
+                        Comprehensive corporate legal and compliance solutions.
+                    </p>
+
                 </div>
+
             </div>
 
             <div className="container section">
+
                 <div className="services-list">
+
                     {services.map((svc, index) => (
-                        <div key={svc.id} id={svc.id} className={`service-detail-card ${index % 2 !== 0 ? 'reverse' : ''}`}>
+
+                        <div
+                            key={svc.id}
+                            id={svc.id}
+                            className={`service-detail-card ${index % 2 !== 0 ? 'reverse' : ''}`}
+                        >
+
                             <div className="service-detail-content">
-                                <div className="service-detail-icon">{svc.icon}</div>
-                                <h2 className="section-title">{svc.title}</h2>
-                                <p className="section-desc">{svc.description}</p>
-                                <ul className="service-features">
-                                    {svc.features.map((feature, i) => (
-                                        <li key={i}><ArrowRight size={16} className="text-accent" /> {feature}</li>
-                                    ))}
-                                </ul>
-                                <Link to="/contact" className="btn btn-primary mt-4">Enquire Now</Link>
-                            </div>
-                            <div className="service-detail-image">
-                                <div className="image-placeholder">
-                                    <img src={svc.image} alt={svc.title} className="service-img" />
+
+                                <div className="service-detail-icon">
+                                    {svc.icon}
                                 </div>
+
+                                <h2 className="section-title">
+                                    {svc.title}
+                                </h2>
+
+                                <p className="section-desc">
+                                    {svc.description}
+                                </p>
+
+                                <ul className="service-features">
+
+                                    {svc.features.map((feature, i) => (
+
+                                        <li key={i}>
+
+                                            <ArrowRight
+                                                size={16}
+                                                className="text-accent"
+                                            />
+
+                                            {feature}
+
+                                        </li>
+
+                                    ))}
+
+                                </ul>
+
+                                <Link
+                                    to="/contact"
+                                    className="btn btn-primary mt-4"
+                                >
+                                    Enquire Now
+                                </Link>
+
                             </div>
+
+                            <div className="service-detail-image">
+
+                                <div className="image-placeholder">
+
+                                    <img
+                                        src={svc.image}
+                                        alt={svc.title}
+                                        className="service-img"
+                                    />
+
+                                </div>
+
+                            </div>
+
                         </div>
+
                     ))}
+
                 </div>
+
             </div>
+
         </div>
+
     );
 }

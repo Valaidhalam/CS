@@ -153,9 +153,21 @@
 }
 
 .intro-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stat-card {
+    flex: 1;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -698,4 +710,8 @@
   .industries-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.intro-container {
+    margin-top: 80px;
 }

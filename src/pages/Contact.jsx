@@ -65,7 +65,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4>Phone</h4>
-                                    <p><a href="tel:+917339688388">+91 7339688388</a></p>
+                                    <p><a href="tel:+917339688388">+91 7339688388 | +91 9363638388</a></p>
                                 </div>
                             </li>
                             <li>
@@ -74,7 +74,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p><a href="mailto:csthulasiraman@gmail.com">csthulasiraman@gmail.com</a></p>
+                                    <p><a href="mailto:csthulasiraman@gmail.com">csthulasiraman@gmail.com | articles.csttr@gmail.com</a></p>
                                 </div>
                             </li>
                             <li>

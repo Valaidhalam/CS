@@ -78,12 +78,12 @@ export default function Footer() {
                         </li>
                         <li>
                             <Phone size={18} className="contact-icon" />
-                            <a href="tel:+917339688388">+91 7339688388</a>
+                            <a href="tel:+917339688388">+91 7339688388 | +91 9363638388</a>
                         </li>
                         <li>
                             <Mail size={18} className="contact-icon" />
                             <a href="mailto:csthulasiraman@gmail.com">
-                                csthulasiraman@gmail.com
+                                csthulasiraman@gmail.com | articles.csttr@gmail.com
                             </a>
                         </li>
                     </ul>
