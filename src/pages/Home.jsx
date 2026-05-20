@@ -45,9 +45,6 @@ export default function Home() {
                 <div className="container hero-container">
                     <div className="hero-content glass-panel animate-fade-in">
                         <h1 className="hero-title">Governance. <br /><span className="text-accent">Compliance.</span> <br />Confidence.</h1>
-                        <p className="hero-subtitle">
-                            Premium Company Secretary &amp; Legal Advisory Services empowering businesses across India.
-                        </p>
                         <div className="hero-actions">
                             <Link to="/contact" className="btn btn-primary btn-lg">Request Consultation</Link>
                             <Link to="/services" className="btn btn-outline btn-lg">Explore Services</Link>
