@@ -25,7 +25,7 @@ export default function Navbar() {
         <Link to="/" className="nav-logo" onClick={closeMenu}>
           <img src={cslogoImg} alt="Logo" className="logo-icon" />
           <div className="logo-text">
-            <span className="logo-title">T. Thulasi Raman</span>
+            <span className="logo-title">Thulasiraman &</span>
             <span className="logo-subtitle">Associates</span>
           </div>
         </Link>

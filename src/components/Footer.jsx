@@ -16,7 +16,7 @@ export default function Footer() {
                     <Link to="/" className="footer-logo">
                         <Gavel className="footer-icon" size={32} />
                         <div className="footer-logo-text">
-                            <span className="footer-title">T. Thulasi Raman</span>
+                            <span className="footer-title">Thulasiraman &</span>
                             <span className="footer-subtitle">Associates</span>
                         </div>
                     </Link>

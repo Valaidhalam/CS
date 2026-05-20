@@ -60,7 +60,7 @@ export default function Home() {
                         <h2 className="section-title">Established Excellence in <br />Corporate Governance</h2>
                         <div className="title-underline"></div>
                         <p className="section-desc">
-                            Thulasi Raman & Associates , practicing Company Secretaries  dedicated to providing comprehensive corporate legal, compliance, and secretarial services. We partner with businesses—from startups, MSMEs to established enterprises—to navigate complex regulatory landscapes with confidence.
+                            Thulasiraman & Associates , practicing Company Secretaries  dedicated to providing comprehensive corporate legal, compliance, and secretarial services. We partner with businesses—from startups, MSMEs to established enterprises—to navigate complex regulatory landscapes with confidence.
                         </p>
                         <Link to="/about" className="link-arrow mt-4">
                             Learn About Our Firm <ArrowRight size={18} />

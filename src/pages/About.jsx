@@ -17,7 +17,7 @@ export default function About() {
                     <div className="about-content">
                         <h2 className="section-title">Our Story</h2>
                         <p className="section-desc mb-4">
-                            Founded in Salem, Tamil Nadu, <strong>T. Thulasi Raman Associates</strong> has grown from a specialized secretarial practice into a comprehensive corporate advisory firm. With over a decade of deep involvement in India's regulatory frameworks, we have successfully guided hundreds of businesses toward sustainable compliance and robust corporate governance.
+                            Founded in Salem, Tamil Nadu, <strong>Thulasiraman  & Associates</strong> has grown from a specialized secretarial practice into a comprehensive corporate advisory firm. With over a decade of deep involvement in India's regulatory frameworks, we have successfully guided hundreds of businesses toward sustainable compliance and robust corporate governance.
                         </p>
                         <p className="section-desc">
                             Our firm is built on the belief that compliance is not a burden, but a strategic advantage. We work closely with our clients, acting not just as consultants, but as integrated partners in their business growth journey.

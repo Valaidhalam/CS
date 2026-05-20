@@ -69,7 +69,7 @@ export default function Careers() {
                 <div className="careers-intro text-center">
                     <h2 className="section-title">Work With Us</h2>
                     <p className="section-desc max-w-700 mx-auto">
-                        At T. Thulasi Raman Associates, we believe that our greatest asset is our people. We foster an environment of continuous learning, professional growth, and mutual respect. Whether you are an experienced professional or a fresh graduate, we offer challenging opportunities to build a rewarding career in corporate law and compliance.
+                        At Thulasiraman & Associates, we believe that our greatest asset is our people. We foster an environment of continuous learning, professional growth, and mutual respect. Whether you are an experienced professional or a fresh graduate, we offer challenging opportunities to build a rewarding career in corporate law and compliance.
                     </p>
                 </div>
 
